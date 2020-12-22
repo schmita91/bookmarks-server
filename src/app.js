@@ -8,6 +8,8 @@ const validateBearerToken = require('./validate-bearer-token')
 const errorHandler = require('./error-handler')
 const bookmarksRouter = require('./bookmarks-router')
 
+console.log(process.env.API_TOKEN)
+
 const app = express()
 
 app.use(morgan((NODE_ENV === 'production') ? 'tiny' : 'common', {
